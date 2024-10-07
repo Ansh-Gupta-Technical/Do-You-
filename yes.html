@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Pop-up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border: 2px solid #ccc;
+            z-index: 1000;
+        }
+        #overlay {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        #music-player {
+            position: fixed;
+            top: 10px; /* Adjust as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1001; /* Make sure it's above the popup */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="overlay"></div>
+    <div id="popup">
+        <p>Do you want to play music?</p>
+        <button id="yes">Yes</button>
+        <button id="no">No</button>
+    </div>
+
+    <div id="music-player">
+        <audio id="background-music" src="yo.mp3" loop controls></audio>
+    </div>
+
+    <script>
+        window.onload = function() {
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('popup').style.display = 'block';
+        };
+
+        document.getElementById('yes').onclick = function() {
+            playMusic();
+            closePopup();
+        };
+
+        document.getElementById('no').onclick = function() {
+            playMusic();
+            closePopup();
+        };
+
+        function playMusic() {
+            const music = document.getElementById('background-music');
+            music.play().catch(function(error) {
+                console.log('Error playing music:', error);
+            });
+        }
+
+        function closePopup() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
+    <title>Ask Her Out</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="tenor-gif-embed"
+        data-postid="253027946666209433"
+        data-share-method="host"
+        data-aspect-ratio="1.37853"
+        data-width="100%"
+      >
+        <a
+          href="https://tenor.com/view/mochi-cat-mochi-and-goma-goma-and-peach-mochi-mochi-peach-cat-gif-gif-253027946666209433"
+          >Mochi Cat GIF</a
+        >from <a href="https://tenor.com/search/mochi-gifs">Mochi GIFs</a>
+      </div>
+      <script
+        type="text/javascript"
+        async
+        src="https://tenor.com/embed.js"
+      ></script>
+      <h1>Hehehehe, I knew it! 😘</h1>
+    </div>
+  </body>
+</html>
